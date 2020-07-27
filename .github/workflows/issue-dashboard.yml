@@ -14,7 +14,7 @@ jobs:
     - name: Check out GitHub Pages branch
       uses: actions/checkout@v2
       with:
-        ref: 'gh-pages'
+        ref: 'master'
         path: 'out'
 
     - name: 'Generate Dashboard'
