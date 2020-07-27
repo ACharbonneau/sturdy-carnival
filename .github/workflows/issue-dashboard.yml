@@ -26,11 +26,11 @@ jobs:
             format: html
             filename: 'out/dashboard.html'
           sections:
-          - title: 'Pull Requests'
+          - title: 'Upcoming Deliverables'
             widgets:
             - type: 'table'
-              title: 'New Pull Requests (This Week)'
-              issue_query: 'repo:libgit2/libgit2 is:open is:issue created:>{{ date("-7 days") }} sort:created-asc'
+              title: 'Upcoming Deliverables'
+              issue_query: 'repo:nih-cfde/deliverables is:open is:labels:July'
         token: ${{ github.token }}
 
     - name: Publish Documentation
