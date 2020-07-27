@@ -39,5 +39,5 @@ jobs:
         git config user.name 'Dashboard User'
         git config user.email 'nobody@nowhere'
         git commit -m 'Documentation update' --allow-empty
-        git push origin gh-pages
+        git push origin master
       working-directory: out
