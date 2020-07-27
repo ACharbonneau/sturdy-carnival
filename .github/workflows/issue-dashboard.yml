@@ -31,7 +31,7 @@ jobs:
             - type: 'table'
               title: 'Upcoming Deliverables'
               issue_query: 'repo:nih-cfde/deliverables is:open is:labels:July'
-        token: ${{ github.token }}
+        token: ${{ HIGHCHARTTEST }}
 
     - name: Publish Documentation
       run: |
