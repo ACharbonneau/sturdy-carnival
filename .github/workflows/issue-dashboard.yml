@@ -4,6 +4,9 @@ on:
   schedule:
   - cron: '*/5 * * * *'
 
+env:
+  OUTPUT_FILE_NAME: date()
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +27,7 @@ jobs:
           title: 'Dashboard'
           output:
             format: html
-            filename: 'out/{{date()}}_dashboard.html'
+            filename: 'out/${{env.OUTPUT_FILE_NAME}}'
           sections:
           - title: 'Upcoming Deliverables'
             widgets:
