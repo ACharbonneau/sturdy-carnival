@@ -30,7 +30,7 @@ jobs:
             widgets:
             - type: 'table'
               title: 'Upcoming Deliverables'
-              issue_query: 'repo:nih-cfde/deliverables is:open is:label:July'
+              issue_query: 'repo:nih-cfde/deliverables is:open is:issue label:Brown'
         token: ${{ secrets.HIGHCHARTTEST }}
 
     - name: Publish Documentation
