@@ -24,7 +24,7 @@ jobs:
           title: 'Dashboard'
           output:
             format: html
-            filename: 'out/date()_dashboard.html'
+            filename: 'out/{{date()}}_dashboard.html'
           sections:
           - title: 'Upcoming Deliverables'
             widgets:
