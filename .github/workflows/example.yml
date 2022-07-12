@@ -19,8 +19,7 @@ jobs:
         shell: sh
         continue-on-error: true
         run: |
-          bob=nachos
-          echo "::set-output name=test::$bob"
+          bob=nachos && echo "::set-output name=test::$bob"
   job2:
     runs-on: ubuntu-latest
     needs: job1
