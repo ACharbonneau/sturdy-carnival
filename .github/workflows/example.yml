@@ -17,7 +17,7 @@ jobs:
         run: echo "::set-output name=test::world"
       - name: spelling
         shell: sh
-        run:
+        run: |
           get_err=$(echo "::set-output name=test::world" 2>&1 > /dev/null)
           echo ${get_err}
           echo "::set-output name=codespell_err::${get_err}"
