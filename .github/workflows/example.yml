@@ -19,8 +19,6 @@ jobs:
         shell: sh
         continue-on-error: true
         run: |
-          $?
-          bob=$(echo $?)
           echo "::set-output name=test::nacho"
   job2:
     runs-on: ubuntu-latest
