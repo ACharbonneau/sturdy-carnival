@@ -9,7 +9,7 @@ jobs:
     outputs:
       output1: ${{ steps.step1.outputs.test }}
       output2: ${{ steps.step2.outputs.test }}
-      codespell_err: ${{ steps.step2.outputs.codespell_err }}
+      codespell_err: ${{ steps.spelling.outputs.codespell_err }}
     steps:
       - id: step1
         run: echo "::set-output name=test::hello"
