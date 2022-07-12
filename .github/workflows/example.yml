@@ -18,9 +18,9 @@ jobs:
       - name: spelling
         shell: sh
         run: |
-          get_err=$(echo "bob" 2>&1 > /dev/null)
-          echo ${get_err}
-          echo "::set-output name=codespell_err::${get_err}"
+          $?
+          bob=$(echo $?)
+          echo "::set-output name=codespell_err::${bob}"
   job2:
     runs-on: ubuntu-latest
     needs: job1
