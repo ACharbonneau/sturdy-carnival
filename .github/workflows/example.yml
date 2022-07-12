@@ -9,7 +9,7 @@ jobs:
     outputs:
       output1: ${{ steps.step1.outputs.test }}
       output2: ${{ steps.step2.outputs.test }}
-      codespell_err: ${{ steps.spelling.outputs.codespell_err }}
+      codespell_err: ${{ steps.spelling.outputs.test}}
     steps:
       - id: step1
         run: echo "::set-output name=test::hello"
@@ -21,7 +21,7 @@ jobs:
         run: |
           $?
           bob=$(echo $?)
-          echo "::set-output name=codespell_err::${bob}"
+          echo '::set-output name=test::${bob}'
   job2:
     runs-on: ubuntu-latest
     needs: job1
